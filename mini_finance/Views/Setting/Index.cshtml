@@ -1,0 +1,108 @@
+@model SettingViewModel
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<div class="title-group mb-3">
+    <h1 class="h2 mb-0">Settings</h1>
+    <small class="text-muted">Customize your app preferences</small>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row my-4">
+    <div class="col-lg-8 col-12">
+        <div class="custom-block bg-white">
+            <h5 class="mb-4">General Settings</h5>
+
+            <form class="custom-form" asp-action="UpdateSettings" method="post">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h6>Notifications</h6>
+                        <div class="form-check form-switch mb-2">
+                            <input asp-for="NotificationEnabled" class="form-check-input" type="checkbox" id="notificationSwitch">
+                            <label class="form-check-label" for="notificationSwitch">
+                                Enable Notifications
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input asp-for="EmailNotifications" class="form-check-input" type="checkbox" id="emailSwitch">
+                            <label class="form-check-label" for="emailSwitch">
+                                Email Notifications
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <h6>Security</h6>
+                        <div class="form-check form-switch">
+                            <input asp-for="TwoFactorEnabled" class="form-check-input" type="checkbox" id="twoFactorSwitch">
+                            <label class="form-check-label" for="twoFactorSwitch">
+                                Two-Factor Authentication
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12">
+                        <label asp-for="Currency" class="form-label">Preferred Currency</label>
+                        <select asp-for="Currency" class="form-control">
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                            <option value="JPY">Japanese Yen (JPY)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 col-12">
+                        <label asp-for="Language" class="form-label">Language</label>
+                        <select asp-for="Language" class="form-control">
+                            <option value="English">English</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 col-12">
+                        <label asp-for="Theme" class="form-label">Theme</label>
+                        <select asp-for="Theme" class="form-control">
+                            <option value="Light">Light</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Auto">Auto</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn custom-btn">Save Settings</button>
+                        <button type="button" class="btn custom-border-btn ms-2">Reset to Default</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-12">
+        <div class="custom-block bg-white">
+            <h5 class="mb-4">Account Actions</h5>
+            
+            <div class="d-grid gap-2">
+                <a href="#" class="btn custom-btn">Change Password</a>
+                <a href="#" class="btn custom-border-btn">Export Data</a>
+                <a href="#" class="btn btn-outline-danger">Delete Account</a>
+            </div>
+        </div>
+
+        <div class="custom-block bg-white">
+            <h5 class="mb-4">App Information</h5>
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p><strong>Last Updated:</strong> May 28, 2025</p>
+            <p><strong>Support:</strong> support@minifinance.com</p>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,132 @@
+@model WalletViewModel
+@{
+    ViewData["Title"] = "My Wallet";
+}
+
+<div class="title-group mb-3">
+    <h1 class="h2 mb-0">My Wallet</h1>
+    <small class="text-muted">Manage your financial transactions</small>
+</div>
+
+<div class="row my-4">
+    <div class="col-lg-8 col-12">
+        <div class="custom-block custom-block-balance">
+            <small>Your Balance</small>
+            <h2 class="mt-2 mb-3">$@Model.Balance.ToString("N2")</h2>
+            <div class="custom-block-numbers d-flex align-items-center">
+                <span>****</span>
+                <span>****</span>
+                <span>****</span>
+                <p>@Model.AccountNumber</p>
+            </div>
+            <div class="d-flex">
+                <div>
+                    <small>Valid Date</small>
+                    <p>@Model.ExpiryDate</p>
+                </div>
+                <div class="ms-auto">
+                    <small>Card Holder</small>
+                    <p>@Model.CardHolderName</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-block bg-white">
+            <h5 class="mb-4">Transaction History</h5>
+            
+            <div class="table-responsive">
+                <table class="table account-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var transaction in Model.RecentTransactions)
+                        {
+                            <tr>
+                                <td>@transaction.Date.ToString("MMM dd, yyyy")</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="@transaction.ProfileImage" class="profile-image me-3" alt="">
+                                        <div>
+                                            <p class="mb-0">@transaction.PersonName</p>
+                                            <small class="text-muted">@transaction.Description</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="@(transaction.IsIncoming ? "text-success" : "text-danger")">
+                                        @(transaction.IsIncoming ? "+" : "")$@Math.Abs(transaction.Amount).ToString("N2")
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-success">@transaction.Status</span>
+                                </td>
+                                <td>
+                                    <a asp-controller="Transaction" asp-action="Detail" asp-route-id="@transaction.Id" 
+                                       class="btn btn-sm custom-btn">View</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-12">
+        <div class="custom-block custom-block-bottom d-flex flex-wrap">
+            <div class="custom-block-bottom-item">
+                <a href="#" class="d-flex flex-column">
+                    <i class="custom-block-icon bi-wallet"></i>
+                    <small>Top up</small>
+                </a>
+            </div>
+
+            <div class="custom-block-bottom-item">
+                <a href="#" class="d-flex flex-column">
+                    <i class="custom-block-icon bi-upc-scan"></i>
+                    <small>Scan & Pay</small>
+                </a>
+            </div>
+
+            <div class="custom-block-bottom-item">
+                <a href="#" class="d-flex flex-column">
+                    <i class="custom-block-icon bi-send"></i>
+                    <small>Send</small>
+                </a>
+            </div>
+
+            <div class="custom-block-bottom-item">
+                <a href="#" class="d-flex flex-column">
+                    <i class="custom-block-icon bi-arrow-down"></i>
+                    <small>Request</small>
+                </a>
+            </div>
+        </div>
+
+        <div class="custom-block bg-white">
+            <h5 class="mb-4">Quick Stats</h5>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span>This Month Income:</span>
+                <strong class="text-success">+$2,450</strong>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span>This Month Expenses:</span>
+                <strong class="text-danger">-$1,892</strong>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <span>Net Change:</span>
+                <strong class="text-success">+$558</strong>
+            </div>
+        </div>
+    </div>
+</div> 

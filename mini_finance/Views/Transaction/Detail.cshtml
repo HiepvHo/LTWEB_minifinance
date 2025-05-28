@@ -1,0 +1,72 @@
+@model TransactionDetailViewModel
+@{
+    ViewData["Title"] = "Transaction Detail";
+}
+
+<div class="title-group mb-3">
+    <h1 class="h2 mb-0">Transaction Detail</h1>
+    <small class="text-muted">View transaction information</small>
+</div>
+
+<div class="row my-4">
+    <div class="col-lg-8 col-12">
+        <div class="custom-block bg-white">
+            <div class="d-flex align-items-center mb-4">
+                <img src="@Model.ProfileImage" class="profile-image img-fluid me-3" alt="">
+                <div>
+                    <h5 class="mb-1">@Model.PersonName</h5>
+                    <p class="mb-0 text-muted">@Model.Description</p>
+                </div>
+                <div class="ms-auto text-end">
+                    <h4 class="mb-1 @(Model.IsIncoming ? "text-success" : "text-danger")">
+                        @(Model.IsIncoming ? "+" : "")$@Math.Abs(Model.Amount).ToString("N2")
+                    </h4>
+                    <span class="badge bg-success">@Model.Status</span>
+                </div>
+            </div>
+
+            <div class="custom-block-transation-detail-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Transaction ID</h6>
+                        <p>@Model.TransactionId</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Date & Time</h6>
+                        <p>@Model.Date.ToString("MMM dd, yyyy") at @Model.Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-block-transation-detail-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Payment Method</h6>
+                        <p>@Model.PaymentMethod</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Category</h6>
+                        <p>@Model.Category</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-block-transation-detail-item">
+                <h6>Notes</h6>
+                <p>@Model.Notes</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-12">
+        <div class="custom-block bg-white">
+            <h5 class="mb-4">Quick Actions</h5>
+            
+            <div class="d-grid gap-2">
+                <a href="#" class="btn custom-btn">Download Receipt</a>
+                <a href="#" class="btn custom-border-btn">Report Issue</a>
+                <a asp-controller="Wallet" asp-action="Index" class="btn custom-btn-bg-white">Back to Wallet</a>
+            </div>
+        </div>
+    </div>
+</div> 

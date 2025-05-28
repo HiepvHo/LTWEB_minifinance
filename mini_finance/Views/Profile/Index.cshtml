@@ -1,0 +1,116 @@
+@model ProfileViewModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="title-group mb-3">
+    <h1 class="h2 mb-0">Profile</h1>
+    <small class="text-muted">Manage your personal information</small>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row my-4">
+    <div class="col-lg-4 col-12">
+        <div class="custom-block custom-block-profile-front custom-block-profile text-center bg-white">
+            <div class="custom-block-profile-image-wrap mb-4">
+                <img src="@Model.ProfileImage" class="custom-block-profile-image img-fluid" alt="">
+                <a href="#" class="bi-pencil-square custom-block-edit-icon"></a>
+            </div>
+
+            <p class="d-flex flex-wrap mb-2">
+                <strong>Name:</strong>
+                <span>@Model.FullName</span>
+            </p>
+
+            <p class="d-flex flex-wrap mb-2">
+                <strong>Email:</strong>
+                <a href="mailto:@Model.Email">@Model.Email</a>
+            </p>
+
+            <p class="d-flex flex-wrap mb-2">
+                <strong>Phone:</strong>
+                <a href="tel:@Model.Phone">@Model.Phone</a>
+            </p>
+
+            <p class="d-flex flex-wrap mb-0">
+                <strong>Member Since:</strong>
+                <span>@Model.MemberSince.ToString("MMM yyyy")</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-8 col-12">
+        <div class="custom-block bg-white">
+            <h5 class="mb-4">Edit Profile Information</h5>
+
+            <form class="custom-form profile-form" asp-action="UpdateProfile" method="post">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="full-name">
+                                <i class="bi-person"></i>
+                            </span>
+                            <input asp-for="FullName" type="text" class="form-control" placeholder="Full Name" aria-describedby="full-name">
+                        </div>
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="email">
+                                <i class="bi-envelope"></i>
+                            </span>
+                            <input asp-for="Email" type="email" class="form-control" placeholder="Email" aria-describedby="email">
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="phone">
+                                <i class="bi-telephone"></i>
+                            </span>
+                            <input asp-for="Phone" type="tel" class="form-control" placeholder="Phone Number" aria-describedby="phone">
+                        </div>
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="date-birth">
+                                <i class="bi-calendar"></i>
+                            </span>
+                            <input asp-for="DateOfBirth" type="date" class="form-control" aria-describedby="date-birth">
+                        </div>
+                        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="address">
+                                <i class="bi-geo-alt"></i>
+                            </span>
+                            <input asp-for="Address" type="text" class="form-control" placeholder="Address" aria-describedby="address">
+                        </div>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="form-control">Update Profile</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 

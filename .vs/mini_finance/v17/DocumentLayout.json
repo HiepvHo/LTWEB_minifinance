@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin1\\source\\repos\\mini_finance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|c:\\users\\admin1\\source\\repos\\mini_finance\\mini_finance\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|solutionrelative:mini_finance\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|c:\\users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|solutionrelative:mini_finance\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|c:\\users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\css\\tooplate-mini-finance.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|solutionrelative:mini_finance\\wwwroot\\css\\tooplate-mini-finance.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|c:\\users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|solutionrelative:mini_finance\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|c:\\users\\admin1\\source\\repos\\mini_finance\\mini_finance\\mini_finance.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{23EE3D25-DCD1-47DE-A760-8DEE747B8093}|mini_finance\\mini_finance.csproj|solutionrelative:mini_finance\\mini_finance.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "mini_finance\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "mini_finance\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T16:32:45.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "mini_finance\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "mini_finance\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T16:32:40.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "tooplate-mini-finance.css",
+              "DocumentMoniker": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\css\\tooplate-mini-finance.css",
+              "RelativeDocumentMoniker": "mini_finance\\wwwroot\\css\\tooplate-mini-finance.css",
+              "ToolTip": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\css\\tooplate-mini-finance.css",
+              "RelativeToolTip": "mini_finance\\wwwroot\\css\\tooplate-mini-finance.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-28T16:32:35.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "mini_finance\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "mini_finance\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-28T16:32:33.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "mini_finance",
+              "DocumentMoniker": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\mini_finance.csproj",
+              "RelativeDocumentMoniker": "mini_finance\\mini_finance.csproj",
+              "ToolTip": "C:\\Users\\admin1\\source\\repos\\mini_finance\\mini_finance\\mini_finance.csproj",
+              "RelativeToolTip": "mini_finance\\mini_finance.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-28T16:32:22.961Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
